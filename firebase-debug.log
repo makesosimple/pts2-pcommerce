@@ -1,0 +1,61 @@
+[debug] [2025-08-15T09:53:43.739Z] ----------------------------------------------------------------------
+[debug] [2025-08-15T09:53:43.746Z] Command:       /Users/buume/.nvm/versions/node/v22.15.0/bin/node /private/tmp/bunx-502-firebase-tools@latest/node_modules/.bin/firebase apps:create IOS pBasket iOS com.logidepo.loreal --project pbasket-by-omeks --debug
+[debug] [2025-08-15T09:53:43.746Z] CLI Version:   14.12.1
+[debug] [2025-08-15T09:53:43.747Z] Platform:      darwin
+[debug] [2025-08-15T09:53:43.747Z] Node Version:  v22.15.0
+[debug] [2025-08-15T09:53:43.747Z] Time:          Fri Aug 15 2025 12:53:43 GMT+0300 (GMT+03:00)
+[debug] [2025-08-15T09:53:43.747Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: Too many arguments. Run firebase help apps:create for usage instructions
+[debug] [2025-08-15T13:57:56.123Z] ----------------------------------------------------------------------
+[debug] [2025-08-15T13:57:56.124Z] Command:       /Users/buume/.nvm/versions/node/v22.15.0/bin/node /private/tmp/bunx-502-firebase-tools@latest/node_modules/.bin/firebase appdistribution:distribute ./dist/ios-511abe5d-2c36-481b-a8b5-78c3d37f3a2f.ipa --app 1:294535764215:ios:4e1da2c1127e4374141bf2 --groups internal-tester --project pbasket-by-omeks --release-notes iOS Ad-Hoc upload (2025-08-15 16:57) --debug
+[debug] [2025-08-15T13:57:56.125Z] CLI Version:   14.12.1
+[debug] [2025-08-15T13:57:56.125Z] Platform:      darwin
+[debug] [2025-08-15T13:57:56.125Z] Node Version:  v22.15.0
+[debug] [2025-08-15T13:57:56.125Z] Time:          Fri Aug 15 2025 16:57:56 GMT+0300 (GMT+03:00)
+[debug] [2025-08-15T13:57:56.125Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-15T13:57:56.128Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-15T13:57:56.128Z] > authorizing via signed-in user (ga@makesosimple.com)
+[info] i  uploading binary... 
+[debug] [2025-08-15T13:57:56.129Z] Checked if tokens are valid: false, expires at: 1755254231786
+[debug] [2025-08-15T13:57:56.129Z] Checked if tokens are valid: false, expires at: 1755254231786
+[debug] [2025-08-15T13:57:56.129Z] > refreshing access token with scopes: []
+[debug] [2025-08-15T13:57:56.130Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-08-15T13:57:56.130Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-15T13:57:56.345Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-08-15T13:57:56.345Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-15T13:57:56.360Z] >>> [apiv2][query] POST https://firebaseappdistribution.googleapis.com/upload/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases:upload [none]
+[debug] [2025-08-15T13:57:56.360Z] >>> [apiv2][body] POST https://firebaseappdistribution.googleapis.com/upload/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases:upload [stream]
+[debug] [2025-08-15T13:58:01.173Z] <<< [apiv2][status] POST https://firebaseappdistribution.googleapis.com/upload/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases:upload 200
+[debug] [2025-08-15T13:58:01.174Z] <<< [apiv2][body] POST https://firebaseappdistribution.googleapis.com/upload/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases:upload {"name":"projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0"}
+[debug] [2025-08-15T13:58:01.175Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:01.175Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:01.176Z] >>> [apiv2][query] GET https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0 [none]
+[debug] [2025-08-15T13:58:01.897Z] <<< [apiv2][status] GET https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0 200
+[debug] [2025-08-15T13:58:01.897Z] <<< [apiv2][body] GET https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0 {"name":"projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0"}
+[debug] [2025-08-15T13:58:03.898Z] [App Distribution Upload Poller] Retrying task index 0
+[debug] [2025-08-15T13:58:03.899Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:03.899Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:03.900Z] >>> [apiv2][query] GET https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0 [none]
+[debug] [2025-08-15T13:58:04.173Z] <<< [apiv2][status] GET https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0 200
+[debug] [2025-08-15T13:58:04.174Z] <<< [apiv2][body] GET https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0 {"name":"projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/-/operations/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0","done":true,"response":{"@type":"type.googleapis.com/google.firebase.appdistro.v1.UploadReleaseResponse","result":"RELEASE_CREATED","release":{"name":"projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240","displayVersion":"1.0.0","buildVersion":"1","createTime":"2025-08-15T13:58:02.002491Z","firebaseConsoleUri":"https://console.firebase.google.com/project/pbasket-by-omeks/appdistribution/app/ios:com.logidepo.loreal/releases/0osisvdv9u240?utm_source=firebase-tools","testingUri":"https://appdistribution.firebase.google.com/testerapps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240?utm_source=firebase-tools","binaryDownloadUri":"https://firebaseappdistribution.googleapis.com/app-binary-downloads/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240/binaries/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0/app.ipa?utm_source=firebase-tools&token=AFb1MRwAAAAAaJ9K_DlaeWGYum2BU5ay76B1B03MlBsIaqimxe7g8Le4BCcsSUx9esVlJknB4T5rlWxdyQ3lvf6SMceXth3j4VcQuCc7bzFBs071NSM0ylC3uZMnyGQcFm7PYl1Gc-8UUfePBUuXSxg4nX2jNld6sesAJdx2B6UW1l3TWkLf4yQDptcfhKzz6mBNvuRY7d6BO6p3ImA_YqVyAqNQbXeoN5Fo-7SJTYGuTNe42nD0FVye6SvKTbw1_hpcy2d9lKkP1fCuOsAmUN7I0__mQRC4sC27kkMj07W6fAaEanxw6XYMiDrIsw2Rg-v5K5KLLS5p6HzwATfiDVbCo8sHgzQkazysTS8"}}}
+[info] ✔  uploaded new release 1.0.0 (1) successfully! 
+[info] ✔  View this release in the Firebase console: https://console.firebase.google.com/project/pbasket-by-omeks/appdistribution/app/ios:com.logidepo.loreal/releases/0osisvdv9u240?utm_source=firebase-tools 
+[info] ✔  Share this release with testers who have access: https://appdistribution.firebase.google.com/testerapps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240?utm_source=firebase-tools 
+[info] ✔  Download the release binary (link expires in 1 hour): https://firebaseappdistribution.googleapis.com/app-binary-downloads/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240/binaries/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0/app.ipa?utm_source=firebase-tools&token=AFb1MRwAAAAAaJ9K_DlaeWGYum2BU5ay76B1B03MlBsIaqimxe7g8Le4BCcsSUx9esVlJknB4T5rlWxdyQ3lvf6SMceXth3j4VcQuCc7bzFBs071NSM0ylC3uZMnyGQcFm7PYl1Gc-8UUfePBUuXSxg4nX2jNld6sesAJdx2B6UW1l3TWkLf4yQDptcfhKzz6mBNvuRY7d6BO6p3ImA_YqVyAqNQbXeoN5Fo-7SJTYGuTNe42nD0FVye6SvKTbw1_hpcy2d9lKkP1fCuOsAmUN7I0__mQRC4sC27kkMj07W6fAaEanxw6XYMiDrIsw2Rg-v5K5KLLS5p6HzwATfiDVbCo8sHgzQkazysTS8 
+[info] i  updating release notes... 
+[debug] [2025-08-15T13:58:04.176Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:04.176Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:04.176Z] >>> [apiv2][query] PATCH https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240 updateMask=release_notes.text
+[debug] [2025-08-15T13:58:04.177Z] >>> [apiv2][body] PATCH https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240 {"name":"projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240","releaseNotes":{"text":"iOS Ad-Hoc upload (2025-08-15 16:57)"}}
+[debug] [2025-08-15T13:58:04.943Z] <<< [apiv2][status] PATCH https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240 200
+[debug] [2025-08-15T13:58:04.944Z] <<< [apiv2][body] PATCH https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240 {"name":"projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240","releaseNotes":{"text":"iOS Ad-Hoc upload (2025-08-15 16:57)"},"displayVersion":"1.0.0","buildVersion":"1","createTime":"2025-08-15T13:58:02.002491Z","firebaseConsoleUri":"https://console.firebase.google.com/project/pbasket-by-omeks/appdistribution/app/ios:com.logidepo.loreal/releases/0osisvdv9u240?utm_source=firebase-tools","testingUri":"https://appdistribution.firebase.google.com/testerapps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240?utm_source=firebase-tools","binaryDownloadUri":"https://firebaseappdistribution.googleapis.com/app-binary-downloads/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240/binaries/00600fe7fc9165031247213486768934751a48a724cef4cac25f1e3e079a0aa0/app.ipa?utm_source=firebase-tools&token=AFb1MRwAAAAAaJ9K_DlaeWGYum2BU5ay76B1B03MlBsIaqimxe7g8Le4BCcsSUx9esVlJknB4T5rlWxdyQ3lvf6SMceXth3j4VcQuCc7bzFBs071NSM0ylC3uZMnyGQcFm7PYl1Gc-8UUfePBUuXSxg4nX2jNld6sesAJdx2B6UW1l3TWkLf4yQDptcfhKzz6mBNvuRY7d6BO6p3ImA_YqVyAqNQbXeoN5Fo-7SJTYGuTNe42nD0FVye6SvKTbw1_hpcy2d9lKkP1fCuOsAmUN7I0__mQRC4sC27kkMj07W6fAaEanxw6XYMiDrIsw2Rg-v5K5KLLS5p6HzwATfiDVbCo8sHgzQkazysTS8"}
+[info] ✔  added release notes successfully 
+[info] i  distributing to testers/groups... 
+[debug] [2025-08-15T13:58:04.944Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:04.944Z] Checked if tokens are valid: true, expires at: 1755269875346
+[debug] [2025-08-15T13:58:04.944Z] >>> [apiv2][query] POST https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240:distribute [none]
+[debug] [2025-08-15T13:58:04.944Z] >>> [apiv2][body] POST https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240:distribute {"testerEmails":[],"groupAliases":["internal-tester"]}
+[debug] [2025-08-15T13:58:06.025Z] <<< [apiv2][status] POST https://firebaseappdistribution.googleapis.com/v1/projects/294535764215/apps/1:294535764215:ios:4e1da2c1127e4374141bf2/releases/0osisvdv9u240:distribute 200

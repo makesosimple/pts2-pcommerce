@@ -4,11 +4,11 @@ import {
   ActivityIndicator,
   BackHandler,
   Platform,
-  RefreshControl,
   StatusBar,
   StyleSheet,
   View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
 
 const TARGET_URL = "https://loreal-pts.makesosimple.com/login";
@@ -55,7 +55,7 @@ export default function Home() {
     if (refreshing) setRefreshing(false);
   }, [refreshing]);
 
-  // Make the page itself paint the full-screen gradient (exact stops) and fill viewport.
+  // Sayfanın tam ekran gradyanı çizmesi için
   const injectedCSS = `
     (function(){
       try {
@@ -73,7 +73,7 @@ export default function Home() {
   `;
 
   return (
-    <View style={styles.root}>
+    <SafeAreaView edges={["top", "bottom"]} style={styles.root}>
       <StatusBar
         barStyle={Platform.OS === "ios" ? "dark-content" : "light-content"}
       />
@@ -87,34 +87,39 @@ export default function Home() {
         onLoadEnd={onLoadEnd}
         javaScriptEnabled
         domStorageEnabled
-        // important bits so the webpage fills the whole screen:
+        // İçerik insetlerine karışma, WebView tam ekran olsun
         automaticallyAdjustContentInsets={false}
         contentInsetAdjustmentBehavior="never"
         bounces={false}
-        // let the web page be the only background source
         style={styles.webview}
         injectedJavaScriptBeforeContentLoaded={injectedCSS}
         injectedJavaScript={injectedCSS}
+        // iOS'ta yerel pull-to-refresh yok; Android'te var
         pullToRefreshEnabled={Platform.OS === "android"}
         {...(Platform.OS === "ios"
           ? {
-              refreshControl: (
-                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-              ),
+              // Not: react-native-webview iOS'ta ScrollView gibi doğrudan refreshControl desteklemez.
+              // İlla iOS'ta da istiyorsan, native taraf veya sarıcı bir çözüm gerekir.
             }
-          : {})}
+          : {
+              // Android tarafında default pull-to-refresh yeterli
+            })}
+        startInLoadingState
         renderLoading={() => (
           <View style={styles.loader}>
             <ActivityIndicator />
           </View>
         )}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#00000000" }, // fully transparent; nothing behind
+  root: {
+    flex: 1,
+    backgroundColor: "#000000",
+  },
   webview: { flex: 1, backgroundColor: "transparent" },
   loader: {
     ...StyleSheet.absoluteFillObject,

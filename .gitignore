@@ -8,6 +8,9 @@ node_modules/
 # Expo
 .expo/
 dist/
+
+.eas-*.json
+.eas-view-*.json
 web-build/
 expo-env.d.ts
 
